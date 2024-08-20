@@ -1,4 +1,32 @@
+section{
+    display: grid;
+    place-items: center;
+}
+
 .container{
     display: grid;
+    max-width: var(--site-width);
     grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "DM sans", sans-serif;
+}
+button {
+    padding: 1em 3.2em;
+    font-size: 1.8rem;
+    line-height: 1;
+    color: var(--white-color);
+    border-radius: 999px;
+    border: none;
+    background-color: transparent;
+}
+
+button.primary {
+    box-shadow: var(--box-shadow);
+    margin-right: 12px;
+}
+button.outline {
+    border: 1px solid var(--white-color);
+    padding-block: 0.8em;
 }
