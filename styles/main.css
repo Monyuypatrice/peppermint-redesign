@@ -1,0 +1,89 @@
+* ::after ::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Inter:wght@400;500;600&display=swap);
+
+
+:root {
+    --primary: hsl(170, 80%, 49%);
+    --bg-color: hsl(200, 27%, 2%);
+    --text-color: hsl(165, 6%, 60%);
+    --white-color: hsl(180, 6%, 97%);
+    --links-color: hsl(162, 5%, 60%);
+    --title-color: linear-gradient(269deg, #000 -20.82%, rgba(255, 255, 255, .5) -8.23%, #fff 24.62%, #fff 85.49%, rgba(255, 255, 255, .5) 114.13%, #000 124.08%);
+    --box-shadow: rgba(14, 201, 189, 0.3) 0px 8px 24px 0px,
+        rgba(0, 0, 0, 0.15) 0px 4px 4px 0px,
+        rgba(28, 233, 194, 0.3) 0px -8px 24px 0px,
+        rgba(0, 0, 0, 0.12) 0px -4px 12px 0px,
+        rgba(28, 233, 194, 0.4) 8px 8px 12px 0px inset,
+        rgba(14, 201, 189, 0.4) -8px -8px 12px 0px inset,
+        rgba(255, 255, 255, 0.4) 0px 0px 8px 0px inset;
+
+
+
+    /* Radius */
+    --radius: 1rem;
+    --pill: 999rem;
+
+    /* Typography */
+
+    /* Width */
+    --site-width: min(1440px, 100%)
+}
+
+body {
+    font-family: Inter;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header{
+    border: 1px solid red;
+    display: flex;
+    width: var(--site-width);
+   align-items: center;
+   justify-content: space-between;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+a{
+    text-decoration: none;
+    color: var(--links-color);
+
+    &:hover{
+        color: var(--white-color);
+        transition: .3s;
+    }
+}
+a.email-cta{
+    color: var(--primary);
+    line-height: 1;
+    position: relative;
+}
+.email-cta::before {
+    content: '';
+    width: 0;
+    height: 1px;
+    border-radius: 2px;
+    background-color: hsl(170, 80%, 49%);
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+}
+
+.email-cta:hover::before {
+    width: 100%;
+    left: 0;
+}
