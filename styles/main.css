@@ -47,34 +47,59 @@ body {
 }
 /* Start of header stylings */
 header{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+ position: fixed;
+ top: 2rem;
+ width: 100%;
+
+   & .header{
+     display: flex;
+     width: var(--site-width);
+     align-items: center;
+     justify-content: space-between;
+     margin: 0 auto;
+  }
 }
-.header{
+.logo{
     display: flex;
-    width: var(--site-width);
-   align-items: center;
-   justify-content: space-between;
+    align-items:center;
+
+    & .logo-image{
+        width: 8rem;
+        height: auto;
+     }
+
+    & .logo-label{
+        width: 15.6rem;
+        height: 2.4rem;
+        margin-top: .4em;
+        margin-left: -.8em;
 }
+   }
 ul{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-}
-a{
+    gap: 4rem;
+
+      a{
     text-decoration: none;
     color: var(--links-color);
 
-    &:hover{
-        color: var(--white-color);
-         transition: 0.5s ease;
-    }
+         &:hover{
+            color: var(--white-color);
+            transition: 0.5s ease;
+        }
+     }
 }
+/* Start of Email link styling */
 a.email-cta{
     color: var(--primary);
     line-height: 1;
     position: relative;
+
+      &:hover{
+            color: var(--primary);
+            transition: 0.5s ease;
+        }
 }
 .email-cta::before {
     content: '';
@@ -87,28 +112,26 @@ a.email-cta{
     left: 50%;
     transition: width .4s, left .4s;
 }
-
 .email-cta:hover::before {
     width: 100%;
     left: 0;
-}
+}  /* End of Email link styling */
 
 /* End of header */
+
 /* Start of Hero section */
 section.hero{
     background-image:  url("../assets/bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
 
-.hero-container{
+    & .hero-container{
     width: 100%;
-    height: 90vh;
+    height: 98vh;
     display: flex;
     justify-content: end;
-
-
+   }
 }
 .hero-content{
     width: min(50%, 1440px / 2);
@@ -116,28 +139,30 @@ section.hero{
     flex-direction: column;
     justify-content: center;
 
-}
-h1{
-    font-size: var(--h1);
-    color: var(--white-color);
-    letter-spacing: -0.025em;
-}
-p{
-    font-size: 2.2rem;
-    font-weight: 400;
-    line-height: 1.3;
-    margin-top: 1.6rem;
-    margin-bottom: 4rem;
-    width: 80%;
+      & h1{
+           font-size: var(--h1);
+           color: var(--white-color);
+           letter-spacing: -0.025em;
+           line-height: 1.2;
+    }
+      & p{
+           font-size: 2.2rem;
+           font-weight: 400;
+           line-height: 1.5;
+           margin-top: 1.6rem;
+           margin-bottom: 4rem;
+           width: 80%;
+       }
 }
 .hero-video{
     width: 50%;
     align-items: center;
-}
-video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    vertical-align: middle;
+
+     & video{
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         vertical-align: middle;
+   }
 }
 /* End of Hero section */

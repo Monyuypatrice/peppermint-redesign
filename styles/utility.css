@@ -11,6 +11,7 @@ section{
 }
 h1, h2, h3, h4, h5, h6{
     font-family: "DM sans", sans-serif;
+    width: var(--site-width);
 }
 button {
     padding: 1em 3.2em;
