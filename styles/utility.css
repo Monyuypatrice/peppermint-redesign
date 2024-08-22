@@ -2,6 +2,9 @@ section{
     display: grid;
     place-items: center;
 }
+.sec-padding{
+        padding-block: clamp(4rem, 7.143vw + 1.714rem, 12rem);
+}
 
 .container{
     display: grid;
@@ -12,6 +15,7 @@ section{
 h1, h2, h3, h4, h5, h6{
     font-family: "DM sans", sans-serif;
     width: var(--site-width);
+    letter-spacing: -0.025em;
 }
 button {
     padding: 1em 3.2em;
@@ -30,4 +34,13 @@ button.primary {
 button.outline {
     border: 1px solid var(--white-color);
     padding-block: 0.8em;
+}
+
+.heading{
+    display: inline-block;
+    background: linear-gradient(270deg,#000 -10.84%,rgba(255,255,255,.5) .04%,#fff 18.55%,#fff 76.71%,rgba(255,255,255,.5) 102.05%,#000 111.85%);
+    background-clip: border-box;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

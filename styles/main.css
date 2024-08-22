@@ -23,8 +23,8 @@ html{
         rgba(14, 201, 189, 0.4) -8px -8px 12px 0px inset,
         rgba(255, 255, 255, 0.4) 0px 0px 8px 0px inset;
     --grid-background: linear-gradient(180deg,rgba(0,0,0,.2) 0,rgba(0,0,0,0) 100%),radial-gradient(12.07% 16% at 100% 35.71%,rgba(39,233,247,.2) 0,rgba(39,233,247,0) 100%),radial-gradient(19.05% 26% at 100% 35.71%,rgba(39,247,164,.15) 0,rgba(39,247,164,0) 100%),linear-gradient(209deg,#2e3836 4.93%,#171c1b 82.74%);
-
-
+    --sub-tittle-bg: radial-gradient(28.57% 28.57% at 50% 100%,rgba(255,255,255,.4) 0,rgba(255,255,255,0) 100%),linear-gradient(0deg,rgba(14,201,189,.6) -26.79%,rgba(14,201,189,0) 32.14%),linear-gradient(133deg,rgba(28,233,194,.4) -3.66%,rgba(28,233,194,0) 35.71%);
+    --sub-tittle-shadow: 0 4px 10px -2px rgba(39,228,228,.3),0 2px 10px 0 rgba(0,0,0,.1),0 -2px 4px -2px rgba(14,254,67,.2),0 -10px 20px 0 rgba(0,0,0,.5);
 
     /* Radius */
     --radius: 1rem;
@@ -32,15 +32,20 @@ html{
 
     /* Typography */
     --h1: clamp(3.2rem, 3.571vw + 2.057rem, 7.2rem);
+    --h2: clamp(2.8rem, 2.5vw + 2rem, 5.6rem);
+    --h3: clamp(2.2rem, 1.964vw + 1.571rem, 4.4rem);
+
     --s-body: 1.7rem;
 
-
     /* Width */
-    --site-width: min(1440px, 100%)
+    --site-width: min(1440px, 100%);
+
+    /* section padding */
+   --sec-pad: clamp(4rem, 7.143vw + 1.714rem, 12rem);
 }
 
 body {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 2.1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -60,6 +65,7 @@ header{
      align-items: center;
      justify-content: space-between;
      margin: 0 auto;
+     padding: 0;
   }
 }
 .logo{
@@ -129,6 +135,7 @@ section.hero{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    padding: 0;
 
     & .hero-container{
     width: 100%;
@@ -168,8 +175,8 @@ section.hero{
          object-fit: cover;
          vertical-align: middle;
    }
-}
-/* End of Hero section */
+} /* End of Hero section */
+
 /* Parters Section */
 h3{
     font-size: 1.6rem;
@@ -188,12 +195,34 @@ h3{
         border-right: 1px solid #49504e;
         padding-right: 10rem;
       }
+}  /* End of Parters Section */
 
+/* Start of why us Section */
+.whyus-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6.4rem;
 
-
+     & .sub-title{
+    display: inline;
+    text-transform: uppercase;
+    border-radius: var(--pill);
+    color: var(--primary);
+    line-height: 1.1;
+    padding: .4em 3.2rem;
+    background-image: var(--sub-tittle-bg);
+    box-shadow: var(--sub-tittle-shadow);
+   }
+   & .heading{
+    font-size: var(--h2);
+    text-align: center;
+    margin-bottom: .8rem;
+   }
+   & p {
+    text-align: center;
+   }
 }
-
-
 .whyus-grid{
     width: var(--site-width);
     display: grid;
@@ -204,7 +233,7 @@ h3{
        border-radius: 1.6rem;
        padding: 1px;
        background: var(--grid-background);
-}
+     }
      & .grid-1{
         grid-column: 1 / 2;
         grid-row: 1 / 2;
@@ -223,40 +252,6 @@ h3{
         grid-row: 3 / 4;
      }
 }
-
-.content:is(:not(.grid--3)){
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        border: 6px solid #000;
-        border-radius: inherit;
-        background: linear-gradient(202deg,#171c1c -5.2%,#040607 70.12%);
-        overflow: hidden;
-        height: 100%
-     }
-
-
-.features-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    flex: 1 1 auto;
-    gap:1.6rem;
-    padding: 2.8rem 2.2rem;
-
-     & h4{
-        font-size: 2.8rem;
-        color: var(--white-color);
-    }
-    & p{
-        font-size: var(--s-body);
-    }
-}
-
-.features-image{
-    display: flex;
-    align-items: end;
-    justify-content: end;
-}
 .grid-3 .content{
     background: linear-gradient(202deg,#171c1c -5.2%,#040607 70.12%);
     border-radius: 1.6rem;
@@ -274,3 +269,33 @@ h3{
 
       }
 }
+.content:is(:not(.grid--3)){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 6px solid #000;
+        border-radius: inherit;
+        background: linear-gradient(202deg,#171c1c -5.2%,#040607 70.12%);
+        overflow: hidden;
+        height: 100%
+     }
+.features-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 1 1 auto;
+    gap:1.6rem;
+    padding: 2.8rem 2.2rem;
+
+     & h4{
+        font-size: 2.8rem;
+        color: var(--white-color);
+    }
+    & p{
+        font-size: var(--s-body);
+    }
+}
+.features-image{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}   /* End of why us Section */
