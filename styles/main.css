@@ -198,31 +198,6 @@ h3{
 }  /* End of Parters Section */
 
 /* Start of why us Section */
-.whyus-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 6.4rem;
-
-     & .sub-title{
-    display: inline;
-    text-transform: uppercase;
-    border-radius: var(--pill);
-    color: var(--primary);
-    line-height: 1.1;
-    padding: .4em 3.2rem;
-    background-image: var(--sub-tittle-bg);
-    box-shadow: var(--sub-tittle-shadow);
-   }
-   & .heading{
-    font-size: var(--h2);
-    text-align: center;
-    margin-bottom: .8rem;
-   }
-   & p {
-    text-align: center;
-   }
-}
 .whyus-grid{
     width: var(--site-width);
     display: grid;
@@ -299,3 +274,30 @@ h3{
     align-items: end;
     justify-content: end;
 }   /* End of why us Section */
+
+
+/* .services{
+    position: relative;
+} */
+.service-heading{
+    width: var(--site-width);
+    height: 600px;
+    background-image: url(../assets/bg-asset.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    justify-content: center;
+    z-index: -2;
+    }
+
+    /* .image{
+  position: relative;
+
+
+     } */
+.shadow-effect{
+            position: absolute;
+right: -300px;
+bottom: 0;
+top: -250px;
+z-index: -1;
+ }
