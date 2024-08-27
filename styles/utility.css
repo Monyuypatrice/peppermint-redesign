@@ -13,6 +13,7 @@ section{
     max-width: var(--site-width);
     align-items: center;
     position: relative;
+    /* border: 1px solid orange; */
 
 }
 h1, h2, h3, h4, h5, h6{
@@ -20,6 +21,7 @@ h1, h2, h3, h4, h5, h6{
     width: var(--site-width);
     letter-spacing: -0.025em;
 }
+
 button {
     padding: 1em 3.2em;
     font-size: 1.8rem;
