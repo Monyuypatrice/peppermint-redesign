@@ -1,6 +1,7 @@
 section{
     display: grid;
     place-items: center;
+    overflow-x: hidden;
 }
 .sec-padding{
         padding-block: clamp(4rem, 7.143vw + 1.714rem, 12rem);

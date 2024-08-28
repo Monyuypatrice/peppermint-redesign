@@ -56,6 +56,7 @@ body {
     line-height: 1.5;
     color: var(--text-color);
     background-color: var(--bg-color);
+    
 
 }
 /* Start of header stylings */
@@ -63,6 +64,7 @@ header{
  position: fixed;
  top: 2rem;
  width: 100%;
+ z-index: 999;
 
    & .header{
      display: flex;
@@ -331,3 +333,188 @@ right: 0;
     width: 800px;
     height: auto;
 } /* Services Section End */
+
+
+.container-padding-top{
+    padding-top: 12rem;
+}
+.shadow-effect-2{
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    bottom: 0;
+    right: 0;
+    
+       & img{
+        max-width: 100%;
+        height: auto;
+        position: relative;
+        left: -35%;
+        object-fit: contain;
+        z-index: -1;
+       }
+     }
+    
+
+     .brand-logos svg{
+        width: 50px;
+        margin-right: 1.6rem;
+        margin-top: 2rem;
+     }
+   
+/* Big Call to action section  */
+     .container-full{
+        width: var(--site-width);
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        place-content: center;
+        justify-items: center;
+        position: relative;
+
+        & .bg-glow{
+            position: absolute;
+            width: var(--site-width);
+  
+            & img{
+                width: 100%;
+                height: 1200px;
+                object-fit: cover;
+                z-index: -1;
+            }
+        } 
+     }
+    .content-grid{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+         
+        & h2 {
+            font-size: var(--h1);
+            text-align: center;
+            color: var(--white-color);
+         }
+
+         & .p-text{
+            text-align: center;
+            margin-right: 0;
+            margin-top: 1rem;
+         }
+
+         & button{
+            margin-top: 3rem;
+    }
+} /* Big Call to action section End */
+
+.process-content{
+    h2 {
+        font-size: var(--h2);
+        text-align: center;
+        color: var(--white-color);
+     }
+
+     & .p-text{
+        text-align: center;
+        margin-right: 0;
+        margin-top: 1rem;
+     }
+}
+
+.process-grid{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: var(--site-width);
+    height: 100vh;
+    gap: 3.2rem;
+
+     & .process{
+        /* width: 45rem; */
+        height: auto;
+        margin: 10rem 0 0 0;
+        /* border: 1px solid #eee; */
+
+        & .process-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & h4{
+            font-size: 2.7rem;
+            color: var(--white-color);
+            text-align: center;
+        }
+         & p {
+             font-size: 1.7rem;
+             color: var(--text-color);
+             text-align: center;
+             margin-right: 0;
+         }
+
+
+     }
+
+     & .process-1{
+        grid-column: 1 / 2;
+        position: relative;
+        left: 11rem;
+        right: -11rem;
+     }
+        & .process-item-1 img{
+            width: 388px;
+            position: absolute;
+            top: -93px;
+            bottom: 183px;
+            right: -143px;
+            left: 228px;    
+         }
+
+     }
+     & .process-2 {
+        grid-column: 3 / 3;
+        position: relative;
+        left: -11rem;
+        right: 11rem;
+
+        & .process-item-2 img{
+            background-image:  url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='186' height='2' viewBox='0 0 186 2' fill='none'%3E%3Cpath d='M185 1H1' stroke='url(%23paint0_radial_1250_3952)' stroke-linecap='round' stroke-linejoin='round' stroke-dasharray='4 4'/%3E%3Cdefs%3E%3CradialGradient id='paint0_radial_1250_3952' cx='0' cy='0' r='1' gradientUnits='userSpaceOnUse' gradientTransform='translate(93 1.57845) rotate(-179.116) scale(37.5045 562.635)'%3E%3Cstop stop-color='%231CE9C2' stop-opacity='0.7'/%3E%3Cstop offset='1' stop-color='%233D4341'/%3E%3C/radialGradient%3E%3C/defs%3E%3C/svg%3E");
+            width: 180px;
+            position: absolute;
+            top: 111px;
+            bottom: 58px;
+            right: 523px;
+            left: -228px;    
+         }
+}
+
+     & .process-3{
+        grid-column: 2 / 2;
+        position: relative;
+
+        & .process-item-3 img {
+            width: 388px;
+            position: absolute;
+            top: -113px;
+            bottom: 183px;
+            right: -143px;
+            left: 228px;   
+          
+         }
+
+     }
+     & .process-4{
+        grid-column: 3 / 2;
+        position: relative;
+
+        & .process-item-4 img {
+            position: absolute;
+            top: -73px;
+            bottom: 210px;
+            right: 242px;
+            left: 230px;    
+         }
+
+     }
